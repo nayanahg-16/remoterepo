@@ -1,6 +1,6 @@
 pipeline {
     agent any
-
+    
     stages {
         stage('hostname') {
             steps {
@@ -8,9 +8,21 @@ pipeline {
             }
         }
 
-        stage('date') {
+        stage('hostname-I') {
             steps {
-                sh 'date'
+                sh 'hostname -I'
+            }
+        }
+
+        stage('CPU') {
+            steps {
+                sh 'lscpu'
+            }
+        }
+
+        stage('disk') {
+            steps {
+                sh 'du -sh'
             }
         }
     }
