@@ -9,7 +9,7 @@ pipeline{
         
         stage('hostname-I'){
             steps{
-                sh 'hostname-I'
+                sh 'hostname -I'
             }
         }
 
