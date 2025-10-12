@@ -1,29 +1,13 @@
 pipeline{
-    agent any
-    
+    agent 'slave'
+
     stages{
-        stage('hostname'){
+        stage('hostanme'){
             steps{
                 sh 'hostname'
             }
-        
-        stage('hostname-I'){
-            steps{
-                sh 'hostname -I'
-            }
-        }
-
-        stage('CPU'){
-            steps{
-                sh 'lscpu'
-            }
-        }
-
-        stage('disk'){
-            steps{
-                sh 'du -sh'
-            }
-        }
         }
     }
+    
+
 }
